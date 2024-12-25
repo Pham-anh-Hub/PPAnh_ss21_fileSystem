@@ -17,7 +17,7 @@ int main(){
 		fflush(stdin);
 		printf("Nhap ten: ");
 		fgets(sv[i].name, 20, stdin);
-		fflush(stdin);
+		sv[i].name[strcspn(sv[i].name,"\n")]='\0';
 		printf("Nhap tuoi: ");
 		scanf("%d", &sv[i].age);
 	}
@@ -28,4 +28,3 @@ int main(){
 	fclose(fptr);
 	return 0;
 }
-
